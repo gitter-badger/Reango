@@ -1,4 +1,6 @@
 # Reango Client Boilerplate
+
+[![Join the chat at https://gitter.im/Reango/Lobby](https://badges.gitter.im/Reango/Lobby.svg)](https://gitter.im/Reango/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 An isomorphic Relay boilerplate
 
 ### Features
