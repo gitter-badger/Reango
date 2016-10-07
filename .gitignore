@@ -1,0 +1,11 @@
+assets/
+lib/
+npm-debug.log
+node_modules/
+/.happypack/
+/src/server/data/schema.json
+/src/server/data/schema.graphql
+/scripts/
+/build/
+/node_modules/
+/graphql.config.json

@@ -1,0 +1,4 @@
+{
+  "graphQLAddress": "http://localhost:8888/graphql",
+  "port": 8888
+}

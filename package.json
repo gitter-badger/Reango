@@ -1,0 +1,78 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production rimraf build && concurrently \"npm run build:client\" \"npm run build:server\"",
+    "build:prod": "NODE_ENV=production rimraf build && concurrently \"npm run build:client\" \"npm run build:server\"",
+    "build:client": "NODE_ENV=production webpack --config ./webpack/prod.babel.js",
+    "build:server": "webpack --config ./webpack/server.babel.js",
+    "start": "NODE_ENV=production node ./src/server/server.babel.js",
+    "start:dev": "NODE_ENV=development node ./src/server/server.babel.js",
+    "test": "jest",
+    "update-schema": "babel-node ./scripts/updateSchema.js",
+    "lint": "eslint src/**",
+    "cleanDir": "rm -r ./.happypack ./assets ./lib"
+  },
+  "metadata": {
+    "graphql": {
+      "schema": "./src/server/data/schema.json"
+    }
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "3.4.0",
+    "autoprefixer": "6.4.1",
+    "babel-core": "6.14.0",
+    "babel-eslint": "6.1.2",
+    "babel-loader": "6.2.5",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-0": "6.5.0",
+    "babel-register": "6.14.0",
+    "babel-relay-plugin": "0.9.3",
+    "babel-relay-plugin-loader": "0.9.0",
+    "concurrently": "2.2.0",
+    "css-loader": "0.25.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "0.9.0",
+    "happypack": "2.2.1",
+    "jest": "^15.1.1",
+    "json-loader": "0.5.4",
+    "postcss-loader": "0.13.0",
+    "postcss-modules-values": "1.2.2",
+    "postcss-nested": "1.0.0",
+    "react-addons-test-utils": "^15.3.2",
+    "react-hot-loader": "^3.0.0-beta.4",
+    "react-transform-catch-errors": "1.0.2",
+    "react-transform-hmr": "1.0.4",
+    "redbox-react": "1.3.1",
+    "rimraf": "2.5.4",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "2.1.0-beta.19",
+    "webpack-dev-middleware": "1.8.1",
+    "webpack-hot-middleware": "2.12.2"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.13.0",
+    "classnames": "2.2.5",
+    "compression": "1.6.2",
+    "es6-promisify": "4.1.0",
+    "express": "4.14.0",
+    "express-graphql": "0.5.4",
+    "graphql": "0.7.0",
+    "graphql-relay": "0.4.3",
+    "isomorphic-relay": "0.7.3",
+    "isomorphic-relay-router": "0.8.3",
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
+    "react-dom-stream": "0.5.1",
+    "react-relay": "0.9.3",
+    "react-router": "3.0.0-beta.1",
+    "winston": "2.2.0"
+  },
+  "engines": {
+    "node": "6.6.0",
+    "npm": "3.10.8"
+  }
+}
